@@ -1,0 +1,141 @@
+:root{
+    --background-color: #dce8ef;
+    --primary-color:#518099;
+    --font-color: #2d3e5f;
+    --alternative-color: #ff844b;
+    --main-color: #f0f5f9;
+}
+
+body{
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main{
+    background-color: var(--main-color);
+    border-radius: 25px;
+   
+    width: 50%;
+    min-width: 500px;
+    height: 100%;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.tittle{
+    font-weight: 400;
+    color: var(--font-color);
+}
+
+.active-tasks{
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    width: 80%;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.secondary-tittle{
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+#inputContainer{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-items: center;
+}
+
+.input{
+    border-radius: 25px;
+    border: none;
+    width: 70%;
+    min-height: 50px;
+    padding-left: 14px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat Alternates'
+}
+.input:active{
+    direction: none;
+    border-style: none;
+    border: none;
+}
+
+#addButton{
+    
+    background-color: var(--alternative-color);
+    border-radius: 25px;
+    width: 18%;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.addSpan{
+    color: var(--font-color);
+    font-weight: 500px;
+    
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+.completeText {
+    color: lightgrey;
+    text-decoration: line-through;
+  }
+
+
+#toDoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    padding-top: 20px;
+    
+  }
+
+
+  .toDoShell {
+    width: 90%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 5px;
+    
+  }
+  
+  .toDoShell span {
+    width: 90%;
+  }
+  .completeText {
+    color: lightgrey;
+    text-decoration: line-through;
+  }
+  
+  .completeCheckbox {
+    transform: scale(1.8);
+  }
+  
