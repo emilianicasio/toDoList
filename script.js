@@ -29,7 +29,13 @@ function buildToDo(todo, index) {
   if(todo.complete === true){
     toDoText.className='completeText'
   } 
+
+  
   toDoShell.appendChild (toDoText);
+  let x =document.createElement('div');
+  x.innerHTML="X";
+  x.className='closeToDo';
+  toDoShell.appendChild(x);
   
   return toDoShell
 }
@@ -67,8 +73,19 @@ function addToDo() {
   
 }
 
+var input= document.querySelector('#toDoInput');
 let btn= document.querySelector('#addButton')
 btn.addEventListener('click',addToDo);
+
+
+
+
+input.addEventListener('keyup',function(e){
+  if (e.keyCode === 13) {
+ addToDo();
+}
+});
+
 
 
 

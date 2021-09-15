@@ -15,6 +15,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    min-height: 100vh;
 }
 
 .main{
@@ -23,13 +25,14 @@ body{
    
     width: 50%;
     min-width: 500px;
-    height: 100%;
+    
     margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-bottom: 150px;
 
 }
 
@@ -81,13 +84,14 @@ body{
     width: 18%;
     text-align: center;
     cursor: pointer;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 .addSpan{
     color: var(--font-color);
     font-weight: 500px;
     
+
 }
 
 textarea:focus, input:focus{
@@ -124,6 +128,7 @@ textarea:focus, input:focus{
     border-radius: 25px;
     font-size: 16px;
     padding: 5px;
+    padding-left: 25px;
     
   }
   
@@ -139,3 +144,26 @@ textarea:focus, input:focus{
     transform: scale(1.8);
   }
   
+
+  .closeToDo{
+      background-color: #ff844b;
+      color: var(--font-color);
+      border-radius: 25px;
+      display: inline;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 25px;
+      padding-top: 5px;
+      
+  }
+
+
+ .footer{
+     background-color: var(--primary-color);
+     width: 100%;
+     position: absolute;
+     bottom: 0; 
+     text-align: right;
+     padding-right: 100px;
+     
+ }
