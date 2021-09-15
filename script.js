@@ -17,8 +17,9 @@ ToDo.prototype.completeToDo= function(){
 
 function buildToDo(todo, index) {
  
-  let toDoShell= document.createElement('div');
+  var toDoShell= document.createElement('div');
   toDoShell.className = 'toDoShell'; 
+  
 
   let toDoText= document.createElement('span');
   toDoText.innerHTML= todo.description;
@@ -32,12 +33,19 @@ function buildToDo(todo, index) {
 
   
   toDoShell.appendChild (toDoText);
+
+
   let x =document.createElement('div');
   x.innerHTML="X";
   x.className='closeToDo';
-  toDoShell.appendChild(x);
   
-  return toDoShell
+  toDoShell.appendChild(x);
+
+ x.addEventListener('click', removeToDo)
+ 
+  
+  
+  return toDoShell;
 }
 
 
@@ -61,6 +69,7 @@ function displayToDos() {
 }
 
 
+
 function addToDo() {
  
   var input= document.querySelector('#toDoInput');
@@ -81,10 +90,13 @@ btn.addEventListener('click',addToDo);
 
 
 input.addEventListener('keyup',function(e){
+  
   if (e.keyCode === 13) {
  addToDo();
 }
 });
+
+
 
 
 
@@ -95,8 +107,22 @@ function completeToDo(event) {
  
   toDoItems[index].completeToDo();
   displayToDos();
+ 
 }
 
+function removeToDo (e){
+
+  let container=document.querySelector('#toDoContainer');
+    let parent =e.path[1]
+    container.removeChild(parent);
+
+  
+}
+
+
+
 displayToDos();
+
+
 
 

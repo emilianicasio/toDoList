@@ -167,3 +167,7 @@ textarea:focus, input:focus{
      padding-right: 100px;
      
  }
+
+ .hide{
+     display: none;
+ }
